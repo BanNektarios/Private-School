@@ -1,0 +1,15 @@
+<%- include partials/header %>
+<%- include partials/navbar %>
+
+<h1><%= headings %> </h1>
+
+<ul>
+    <% for (let i = 0; i < trainers.length; i++) { %>
+    <li><%= trainers[i].id %> </li>
+    <li><%= trainers[i].firstName %> </li>
+    <li><%= trainers[i].lastName %> </li>
+    <li><%= trainers[i].subject %> </li>
+    <% } %>
+</ul>
+
+<%- include partials/footer %>
