@@ -1,0 +1,16 @@
+<%- include partials/header %>
+<%- include partials/navbar %>
+
+<h1><%= title %> </h1>
+
+<ul>
+    <% for (let i = 0; i < students.length; i++) { %>
+    <li><%= students[i].id %> </li>
+    <li><%= students[i].firstName %> </li>
+    <li><%= students[i].lastName %> </li>
+    <li><%= students[i].dateOfBirth %> </li>
+    <li><%= students[i].tuitionFees %> </li>
+    <% } %>
+</ul>
+
+<%- include partials/footer %>

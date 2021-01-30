@@ -1,0 +1,18 @@
+<%- include partials/header %>
+<%- include partials/navbar %>
+
+<h1><%= title %> </h1>
+
+<ul>
+    <% for (let i = 0; i < courses.length; i++) { %>
+    <li><%= courses[i].id %> </li>
+    <li><%= courses[i].title %> </li>
+    <li><%= courses[i].stream %> </li>
+    <li><%= courses[i].type %> </li>
+    <li><%= courses[i].start_date %> </li>
+    <li><%= courses[i].end_date %> </li>
+    <% } %>
+</ul>
+
+
+<%- include partials/footer %>
