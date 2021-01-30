@@ -8,8 +8,8 @@
     <li><%= students[i].id %> </li>
     <li><%= students[i].firstName %> </li>
     <li><%= students[i].lastName %> </li>
-    <li><%= students[i].dateOfBirth %> </li>
-    <li><%= students[i].tuitionFees %> </li>
+    <li><%= students[i].birthDate.toString().slice(0,16) %> </li>
+    <li><%= students[i].tuitionFees + '€' %> </li>
     <% } %>
 </ul>
 
