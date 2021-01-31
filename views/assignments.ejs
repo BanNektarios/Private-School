@@ -2,16 +2,21 @@
 <%- include partials/navbar %>
 
 <h1><%= headings %> </h1>
-
-<ul>
+<div class="row mb-5">
     <% for (let i = 0; i < assignments.length; i++) { %>
-    <li><%= assignments[i].id %> </li>
-    <li><%= assignments[i].title %> </li>
-    <li><%= assignments[i].description %> </li>
-    <li><%= assignments[i].subDate %> </li>
-    <li><%= assignments[i].oralMark %> </li>
-    <li><%= assignments[i].totalMark %> </li>
-    <% } %>
-</ul>
 
+    <div class="col-xs-1-12 m-2 p-2">
+
+        <ul>
+            <li hidden><%= assignments[i].id %> </li>
+            <li><%= assignments[i].title %> </li>
+            <li><%= assignments[i].description %> </li>
+            <li><%= assignments[i].subDate.toString().slice(0,16) %> </li>
+            <li><%= assignments[i].oralMark %> </li>
+            <li><%= assignments[i].totalMark %> </li>
+        </ul>
+    </div>
+    <% } %>
+
+</div>
 <%- include partials/footer %>

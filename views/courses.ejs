@@ -3,16 +3,23 @@
 
 <h1><%= headings %> </h1>
 
-<ul>
+<div class="row mb-5">
     <% for (let i = 0; i < courses.length; i++) { %>
-    <li><%= courses[i].id %> </li>
-    <li><%= courses[i].title %> </li>
-    <li><%= courses[i].stream %> </li>
-    <li><%= courses[i].type %> </li>
-    <li><%= courses[i].start_date %> </li>
-    <li><%= courses[i].end_date %> </li>
+
+    <div class="col-xs-1-12 m-2 p-2">
+
+        <ul>
+            <li hidden><%= courses[i].id %> </li>
+            <li><%= courses[i].title %> </li>
+            <li><%= courses[i].stream %> </li>
+            <li><%= courses[i].type %> </li>
+            <li><%= courses[i].start_date.toString().slice(0,16) %> </li>
+            <li><%= courses[i].end_date.toString().slice(0,16) %> </li>
+        </ul>
+    </div>
     <% } %>
-</ul>
+
+</div>
 
 
 <%- include partials/footer %>

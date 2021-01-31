@@ -57,6 +57,25 @@ router.get('/assignments/:message?', (req, res, next) => {
     })
 });
 
+router.get('/students/add', (req, res, next) => {
+    res.render('add_student', { title: 'New Student', headings: 'Fill the new Student Form.' })
+})
+
+router.post('/students/add', (req, res, next) => {
+    const { firstName, lastName, birthDate, tuitionFees } = req.body;
+    console.log(firstName, lastName, birthDate, tuitionFees)
+    const query = `INSERT INTO students(firstName, lastName, birthDate, tuitionFees) VALUES('${firstName}', '${lastName}', '${birthDate}', '${tuitionFees}');`;
+    dbConnection.query(query, (err, status) => {
+        if (err) {
+            res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/students"' })
+        } else {
+            console.log(status)
+            res.redirect(`/list/students`);
+        }
+    });
+});
+
+
 router.get('/trainers/add', (req, res, next) => {
     res.render('add_trainer', { title: 'New Trainer', headings: 'Fill the new trainer Form.' })
 })

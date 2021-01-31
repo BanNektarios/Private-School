@@ -1,0 +1,35 @@
+<%- include partials/header %>
+<%- include partials/navbar %>
+
+
+<h1> <%= headings %> </h1>
+
+<div>
+    <form action="" method="post">
+        <h3>Add new Student here.</h3>
+        <div class="form-group">
+            <label for="addStudent">First Name: </label>
+            <input title="Enter only letters!" type="text" class="form-control" name="firstName" id="firstName"
+                placeholder="First Name!">
+        </div>
+        <div class="form-group">
+            <label for="addStudent">Last Name: </label>
+            <input title="Enter only letters!" type="text" class="form-control" name="lastName" id="lastName"
+                placeholder="Last Name!">
+        </div>
+        <div class="form-group">
+            <label for="addStudent"> Date of Birth: </label>
+            <input title="Date format is: YYYY-MM-DD!" type="date" class="form-control" name="birthDate" id="birthDate"
+                placeholder="Birth Date!">
+        </div>
+        <div class="form-group">
+            <label for="addStudent"> Tuition Fees: </label>
+            <input title="Enter only the number!" type="number" class="form-control" name="tuitionFees" id="tuitionFees"
+                placeholder="Amount!">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+
+<%- include partials/footer %>
