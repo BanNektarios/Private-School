@@ -3,13 +3,23 @@
 
 <h1><%= headings %> </h1>
 
-<ul>
-    <% for (let i = 0; i < trainers.length; i++) { %>
-    <li><%= trainers[i].id %> </li>
-    <li><%= trainers[i].firstName %> </li>
-    <li><%= trainers[i].lastName %> </li>
-    <li><%= trainers[i].subject %> </li>
-    <% } %>
-</ul>
+    <div class="row mb-5">
+
+        <% for (let i = 0; i < trainers.length; i++) { %>
+        <div class="col-xs-1-12 m-2 p-2">
+
+            <ul>
+                <li><%= trainers[i].firstName %> </li>
+                <li><%= trainers[i].lastName %> </li>
+                <li><%= trainers[i].subject %> </li>
+            </ul>
+        </div>
+
+        <% } %>
+    </div>
+
+    <a href="http://localhost:3000/list/trainers/add"><button type="button" name="addTr" id="addTr" class="btn btn-warning" btn-lg btn-block">Add new Trainer</button></a>
+
+
 
 <%- include partials/footer %>

@@ -3,14 +3,24 @@
 
 <h1><%= headings %> </h1>
 
-<ul>
-    <% for (let i = 0; i < students.length; i++) { %>
-    <li><%= students[i].id %> </li>
-    <li><%= students[i].firstName %> </li>
-    <li><%= students[i].lastName %> </li>
-    <li><%= students[i].birthDate.toString().slice(0,16) %> </li>
-    <li><%= students[i].tuitionFees + '€' %> </li>
-    <% } %>
-</ul>
+    <div class="row mb-5">
+        <% for (let i = 0; i < students.length; i++) { %>
+
+        <div class="col-xs-1-12 m-2 p-2">
+
+            <ul>
+                <li hidden><%= students[i].id %> </li>
+                <li><%= students[i].firstName %> </li>
+                <li><%= students[i].lastName %> </li>
+                <li><%= students[i].birthDate.toString().slice(0,16) %> </li>
+                <li><%= students[i].tuitionFees + '€' %> </li>
+            </ul>
+        </div>
+
+        <% } %>
+    </div>
+
+
+
 
 <%- include partials/footer %>

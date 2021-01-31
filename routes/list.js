@@ -34,7 +34,7 @@ router.get('/courses/:message?', (req, res, next) => {
 });
 
 /* GET Trainers page. */
-router.get('/trainers/:message?', (req, res, next) => {
+router.get('/trainers', (req, res, next) => {
     const query = "SELECT * FROM trainers"
     dbConnection.query(query, (err, rows) => {
         if (err) {
@@ -57,14 +57,19 @@ router.get('/assignments/:message?', (req, res, next) => {
     })
 });
 
-router.post('trainers', (req, res, next) => {
-    const { id, firstName, lastName, subject } = req.params;
-    const query = `INSERT INTO trainers(firstName, lastName, subject) VALUES(?, ?, ?);`;
-    dbConnection.execute(query, [firstName, lastName, subject], (err, status) => {
+router.get('/trainers/add', (req, res, next) => {
+    res.render('add_trainer', { title: 'New Trainer', headings: 'Fill the new trainer Form.' })
+})
+
+router.post('/trainers/add', (req, res, next) => {
+    const { firstName, lastName, subject } = req.body;
+    console.log(firstName, lastName, subject)
+    const query = `INSERT INTO trainers(firstName, lastName, subject) VALUES('${firstName}', '${lastName}', '${subject}');`;
+    dbConnection.query(query, (err, status) => {
         if (err) {
             res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/trainers"' })
         } else {
-            res.redirect(`list/trainers?Added trainer`);
+            res.redirect(`/list/trainers`);
         }
     });
 });
