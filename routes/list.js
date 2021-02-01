@@ -3,6 +3,10 @@ var router = express.Router();
 var dbConnection = require('../lib/DB');
 
 
+/**
+ *  TODO make the complete url into a variable like we did in class
+ **/ 
+
 /* GET Lists page. */
 router.get('/', (req, res, next) => {
     res.render('list', { title: 'Lists', headings: 'Choose what list you want to see!' })
