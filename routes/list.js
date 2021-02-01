@@ -57,10 +57,12 @@ router.get('/assignments/:message?', (req, res, next) => {
     })
 });
 
+// Gets the page where we add students
 router.get('/students/add', (req, res, next) => {
     res.render('add_student', { title: 'New Student', headings: 'Fill the new Student Form.' })
 })
 
+// posts
 router.post('/students/add', (req, res, next) => {
     const { firstName, lastName, birthDate, tuitionFees } = req.body;
     console.log(firstName, lastName, birthDate, tuitionFees)
