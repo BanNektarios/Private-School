@@ -62,7 +62,7 @@ router.get('/students/add', (req, res, next) => {
     res.render('add_student', { title: 'New Student', headings: 'Fill the new Student Form.' })
 })
 
-// posts
+// posts the new data from the form to students
 router.post('/students/add', (req, res, next) => {
     const { firstName, lastName, birthDate, tuitionFees } = req.body;
     console.log(firstName, lastName, birthDate, tuitionFees)
@@ -77,11 +77,12 @@ router.post('/students/add', (req, res, next) => {
     });
 });
 
-
+// Gets the page where we add trainers
 router.get('/trainers/add', (req, res, next) => {
     res.render('add_trainer', { title: 'New Trainer', headings: 'Fill the new trainer Form.' })
 })
 
+// posts the new data from the form to trainers
 router.post('/trainers/add', (req, res, next) => {
     const { firstName, lastName, subject } = req.body;
     console.log(firstName, lastName, subject)
