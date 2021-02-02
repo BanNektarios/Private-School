@@ -1,11 +1,14 @@
 <%- include partials/header %>
 <%- include partials/navbar %>
 
-<h1><%= headings %> </h1>
+<h1 class="display-4"><%= headings %> </h1>
 
-<a href="http://localhost:3000/list/courses">
-    Courses
-</a>
+<div>
+    <a href="http://localhost:3000/list/courses">
+        Courses
+    </a>
+</div>
+
 <a href="http://localhost:3000/list/students">
     Students
 </a>
@@ -15,4 +18,6 @@
 <a href="http://localhost:3000/list/assignments">
     Assignments
 </a>
+
+<img src="images/erd-diagram.png" alt="ERD Diagram">
 <%- include partials/footer %>

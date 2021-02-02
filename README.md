@@ -1,7 +1,8 @@
 # README File for the Personal Project 
 
-#   To run this app correctly, follow these steps:
+#   To run this app correctly, follow these steps.
 
+START BY:
 1) go to ./lib/DB.js and initDB.js and change the credencials to match your dld<br>
 2) make sure to have your local MySQL server running.<br>
 3) 'npm run buildDB' <-- this creates the schema, the tables, and populates the tables --><br>
