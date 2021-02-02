@@ -2,7 +2,7 @@
 
 #   To run this app correctly, follow these steps:
 
-i) go to ./lib/DB.js and initDB.js and change the credencials to match your dld
+i) go to ./lib/DB.js and initDB.js and change the credencials to match your dld<br>
 ii) make sure to have your local MySQL server running.
 iii) 'npm run buildDB' <-- this creates the schema, the tables, and populates the tables -->
 iv) 'npm start' <-- this runs the app -->
