@@ -3,11 +3,146 @@
   padding: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Baskerville:wght@700&display=swap');
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Baskervville', serif, sans-serif;
+  font-family: 'Libre Baskerville', serif, sans-serif;
+  color: white;
+  /* background: -webkit-gradient(linear,top, bottom, color-stop(0%, #00938f), color-stop(35%, #26ab8f), color-stop(100%, #5ac387)); */
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  background-image: url(../images/school.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(3px);
+}
+
+body {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 2em;
+}
+
+#logo {
+  max-width: 70px;
+  display: block;
+  border-radius: 7px;
+}
+
+.navbar {
+  background: -webkit-gradient(linear, right top, left top, color-stop(0%, #00938f), color-stop(35%, #26ab8f), color-stop(100%, #5ac387));
+  opacity: 0.9;
+  width: 100vw;
+  margin-bottom: 3em;
+}
+
+.dropdown {
+  color: white;
+}
+
+#ham {
+  display: inline-block;
+  height: 8px;
+  background-color: white;
+}
+
+
+
+#form {
+  padding: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: grid;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+#form {
+  position: relative;
+  animation-name: slide;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.265, 2);
+}
+
+#formDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.h1Form {
+  text-shadow: 4px 3px black;
+  text-align: right;
+  padding-right: 25px;
+  text-transform: capitalize;
+}
+
+
+
+@keyframes slide {
+  from {
+    top: -100px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+#description {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 27px;
 }
 
 a {
-  color: #00B7FF;
+  color: white;
 }
+
+a:hover {
+  color: #002524;  
+}
+
+.btn {
+  padding: 8px 0;
+  background-color: hsla(180, 70%, 40%, 0.8);
+  color: white;
+  border-radius: 7px;
+  font-size: large;
+}
+
+@media(max-width: 680px) {
+  #formDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .h1Form {
+    text-shadow: 4px 3px black;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  
+}
+
 

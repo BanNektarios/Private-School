@@ -5,10 +5,11 @@ var dbConnection = require('../lib/DB');
 
 /**
  *  TODO make the complete url into a variable like we did in class
- **/ 
-
+ **/
+var fullUrl;
 /* GET Lists page. */
 router.get('/', (req, res, next) => {
+    fullUrl = req.protocol + '://' + req.get('host') + req.baseUrl;
     res.render('list', { title: 'Lists', headings: 'Choose what list you want to see!' })
 });
 
@@ -91,7 +92,7 @@ router.post('/trainers/add', (req, res, next) => {
     const { firstName, lastName, subject } = req.body;
     console.log(firstName, lastName, subject)
     const query = `INSERT INTO trainers(firstName, lastName, subject) VALUES('${firstName}', '${lastName}', '${subject}');`;
-    dbConnection.query(query, (err, status) => {
+    dbConnection.execute(query, (err, status) => {
         if (err) {
             res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/trainers"' })
         } else {
@@ -104,4 +105,4 @@ router.post('/trainers/add', (req, res, next) => {
 
 
 
-module.exports = router;
+module.exports = router, fullUrl;

@@ -2,11 +2,13 @@
 <%- include partials/navbar %>
 
 
-<h1> <%= headings %> </h1>
 
-<div>
-    <form action="" method="post">
-        <h3>Add new Trainer here.</h3>
+<div id="formDiv" class="p3">
+    <div class="h1Div">
+        <h1 class="col-sm-1-12 h1Form display-4 mr-5"><em> <%= headings %> </em></h1>
+
+    </div>
+    <form id="form" action="" method="post">
         <div class="form-group">
             <label for="addTrainer">First Name: </label>
             <input title="Enter only letters!" type="text" class="form-control" name="firstName" id="firstName"
@@ -22,7 +24,7 @@
             <input title="Enter only letters!" type="text" class="form-control" name="subject" id="subject"
                 placeholder="Subject!">
         </div>
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn">Submit</button>
     </form>
 </div>
 
