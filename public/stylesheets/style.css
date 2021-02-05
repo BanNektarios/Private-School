@@ -26,7 +26,7 @@ body::before {
   display: block;
   width: 100vw;
   height: 100vh;
-  filter: blur(3px);
+  filter: blur(5px);
 }
 
 body {
@@ -34,7 +34,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   font-size: 2em;
 }
 
@@ -55,12 +54,23 @@ body {
   color: white;
 }
 
-#ham {
-  display: inline-block;
-  height: 8px;
-  background-color: white;
+#parentDiv {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+  grid-gap: 1rem;
+  background-color: #9db0a3;
+  align-content: center;
 }
 
+#title {
+  position: relative;
+  left: 0px;
+}
+
+.childDiv {
+  margin: auto;
+}
 
 
 #form {
@@ -86,7 +96,7 @@ body {
   align-items: center;
 }
 
-.h1Form {
+.h1Form, #title {
   text-shadow: 4px 3px black;
   text-align: right;
   padding-right: 25px;

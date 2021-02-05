@@ -4,10 +4,7 @@ var dbConnection = require('../lib/DB');
 const { Student } = require('../models/student');
 
 
-/**
- *  TODO make the complete url into a variable like we did in class
- **/
-var fullUrl;
+var fullUrl; // <====== can I use this??
 /* GET Lists page. */
 router.get('/', (req, res, next) => {
     fullUrl = req.protocol + '://' + req.get('host') + req.baseUrl;
