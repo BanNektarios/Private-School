@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var dbConnection = require('../lib/DB');
+const { Student } = require('../models/student');
 
 
 /**
@@ -69,14 +70,11 @@ router.get('/students/add', (req, res, next) => {
 
 // posts the new data from the form to students
 router.post('/students/add', (req, res, next) => {
-    const { firstName, lastName, birthDate, tuitionFees } = req.body;
-    console.log(firstName, lastName, birthDate, tuitionFees)
-    const query = `INSERT INTO students(firstName, lastName, birthDate, tuitionFees) VALUES('${firstName}', '${lastName}', '${birthDate}', '${tuitionFees}');`;
-    dbConnection.execute(query, (err, status) => {
+    const query = `INSERT INTO students(firstName, lastName, birthDate, tuitionFees) VALUES(?, ?, ?, ?);`;
+    dbConnection.execute(query,[req.body.firstName, req.body.lastName, req.body.birthDate, req.body.tuitionFees], (err, status) => {
         if (err) {
-            res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/students"' })
+            res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/students"' + err })
         } else {
-            console.log(status)
             res.redirect(`/list/students`);
         }
     });
@@ -89,10 +87,8 @@ router.get('/trainers/add', (req, res, next) => {
 
 // posts the new data from the form to trainers
 router.post('/trainers/add', (req, res, next) => {
-    const { firstName, lastName, subject } = req.body;
-    console.log(firstName, lastName, subject)
-    const query = `INSERT INTO trainers(firstName, lastName, subject) VALUES('${firstName}', '${lastName}', '${subject}');`;
-    dbConnection.execute(query, (err, status) => {
+    const query = `INSERT INTO trainers(firstName, lastName, subject) VALUES(?, ?, ?);`;
+    dbConnection.execute(query,[req.body.firstName, req.body.lastName, req.body.subject], (err, status) => {
         if (err) {
             res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/trainers"' })
         } else {
@@ -101,8 +97,4 @@ router.post('/trainers/add', (req, res, next) => {
     });
 });
 
-
-
-
-
-module.exports = router, fullUrl;
+module.exports = router;

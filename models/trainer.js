@@ -1,4 +1,4 @@
-export class Trainer {
+class Trainer {
     constructor (id, firstName, lastName, subject) {
         this.id = id;
         this.firstName = firstName;
@@ -6,3 +6,5 @@ export class Trainer {
         this.subject = subject;
     }
 }
+
+module.exports = Trainer;

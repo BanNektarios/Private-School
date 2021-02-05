@@ -1,4 +1,4 @@
-export class Student {
+class Student {
     constructor (id, firstName, lastName, birthDate, tuitionFees) {
         this.id = id;
         this.firstName = firstName;
@@ -7,3 +7,5 @@ export class Student {
         this.tuitionFees = tuitionFees;
     }
 }
+
+module.exports = Student;

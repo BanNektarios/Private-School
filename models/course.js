@@ -1,6 +1,6 @@
 import { end } from "../lib/DB";
 
-export class Course {
+class Course {
     constructor(id, title, stream, type, start_date, end_date){
         this.id = id;
         this.title = title;
@@ -10,3 +10,5 @@ export class Course {
         this.end_date = end_date;
     }
 }
+
+module.exports =  Course;

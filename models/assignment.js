@@ -1,4 +1,4 @@
-export class Assignment {
+class Assignment {
     constructor (id, title, description, subDate, oralMark, totalMark){
         this.id = id;
         this.title = title;
@@ -8,3 +8,5 @@ export class Assignment {
         this.totalMark = totalMark;
     }
 }
+
+module.exports = Assignment;
