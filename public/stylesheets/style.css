@@ -121,7 +121,7 @@ a:hover {
   color: #002524;  
 }
 
-.btn {
+.btn-submit {
   padding: 8px 0;
   background-color: hsla(180, 70%, 40%, 0.8);
   color: white;

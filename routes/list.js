@@ -72,7 +72,7 @@ router.post('/students/add', (req, res, next) => {
     const { firstName, lastName, birthDate, tuitionFees } = req.body;
     console.log(firstName, lastName, birthDate, tuitionFees)
     const query = `INSERT INTO students(firstName, lastName, birthDate, tuitionFees) VALUES('${firstName}', '${lastName}', '${birthDate}', '${tuitionFees}');`;
-    dbConnection.query(query, (err, status) => {
+    dbConnection.execute(query, (err, status) => {
         if (err) {
             res.render('list', { title: "List - ERROR", headings: 'Got And error on "/add/students"' })
         } else {

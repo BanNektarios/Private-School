@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-sm">
     <img id="logo" src="images/logo.png" alt="Logo">
     <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span id="ham"></span></button>
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span
+            id="ham"></span></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
@@ -10,6 +11,16 @@
             <li class="nav-item">
                 <a class="nav-link" href="/list">Lists</a>
             </li>
+            <div class="btn-group" role="group">
+                <button id="dropdownId" type="button" class="btn dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                Add
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="/list/students/add">Student</a>
+                    <a class="dropdown-item" href="/list/trainers/add">Trainer</a>
+                </div>
+            </div>
         </ul>
     </div>
 </nav>
