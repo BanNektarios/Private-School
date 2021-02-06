@@ -26,7 +26,7 @@ body::before {
   display: block;
   width: 100vw;
   height: 100vh;
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
 body {
@@ -50,27 +50,51 @@ body {
   margin-bottom: 3em;
 }
 
-.dropdown {
-  color: white;
-}
-
 #parentDiv {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
-  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
-  grid-gap: 1rem;
-  background-color: #9db0a3;
-  align-content: center;
-}
-
-#title {
-  position: relative;
-  left: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: auto;
 }
 
 .childDiv {
   margin: auto;
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+  background-color:#003331;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  opacity: 0.9;
 }
+
+.fromLeft {
+  position: relative;
+  animation-name: fromleft;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.89,.07,2,.99);
+}
+
+.fromRight {
+  position: relative;
+  animation-name: fromright;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.89,.07,2,.99);
+}
+
+
+@keyframes fromleft {
+  from {left: -150px;}
+  to {left: 0px;}
+}
+@keyframes fromright {
+  from {right: -150px;}
+  to {right: 0px;}
+}
+
 
 
 #form {

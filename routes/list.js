@@ -8,7 +8,7 @@ var fullUrl; // <====== can I use this??
 /* GET Lists page. */
 router.get('/', (req, res, next) => {
     fullUrl = req.protocol + '://' + req.get('host') + req.baseUrl;
-    res.render('list', { title: 'Lists', headings: 'Choose what list you want to see!' })
+    res.render('list', { title: 'Lists', headings: 'Choose what item you want to see!' })
 });
 
 /* GET Students page. */

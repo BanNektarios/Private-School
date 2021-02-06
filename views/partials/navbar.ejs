@@ -1,29 +1,30 @@
-<nav class="navbar navbar-expand-sm">
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
     <img id="logo" src="images/logo.png" alt="Logo">
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span
-            id="ham"></span></button>
+
+    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/list">Lists</a>
+                <a class="nav-link" href="/list/">Our Stuff</a>
             </li>
-            <div class="btn-group" role="group">
-                <button id="dropdownId" type="button" class="btn dropdown-toggle" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                Add
-                </button>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Add</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownId">
                     <a class="dropdown-item" href="/list/students/add">Student</a>
                     <a class="dropdown-item" href="/list/trainers/add">Trainer</a>
                 </div>
-            </div>
+            </li>
         </ul>
     </div>
 </nav>
+
 <main>
 
     <div class="container">

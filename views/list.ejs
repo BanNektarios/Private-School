@@ -1,24 +1,29 @@
 <%- include partials/header %>
 <%- include partials/navbar %>
 
-<h1 class="display-4"><%= headings %> </h1>
 
-<div>
-    <a href="http://localhost:3000/list/courses">
-        Courses
-    </a>
+<div id="parentDiv" class="mt-5">
+    <h1 class="display-4"><%= headings %> </h1>
+
+    <div class="childDiv fromLeft">
+        <a href="http://localhost:3000/list/courses">
+            Courses
+        </a>
+    </div>
+    <div class="childDiv fromRight">
+        <a href="http://localhost:3000/list/students">
+            Students
+        </a>
+    </div>
+    <div class="childDiv fromLeft">
+        <a href="http://localhost:3000/list/trainers">
+            Trainers
+        </a>
+    </div>
+    <div class="childDiv fromRight">
+        <a href="http://localhost:3000/list/assignments">
+            Assignments
+        </a>
+    </div>
 </div>
-
-<a href="http://localhost:3000/list/students">
-    Students
-</a>
-<a href="http://localhost:3000/list/trainers">
-    Trainers
-</a>
-<a href="http://localhost:3000/list/assignments">
-    Assignments
-</a>
-
-<img src="/list/images/erd-diagram.png" alt="ERD Diagram" hidden>
-
 <%- include partials/footer %>
