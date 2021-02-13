@@ -41,7 +41,15 @@ body {
   max-width: 60px;
   display: block;
   border-radius: 7px;
+}
 
+#titleList {
+  background: #003331;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 90%;
 }
 
 .navbar {
@@ -51,6 +59,7 @@ body {
   margin-bottom: 3em;
   color: black;
 }
+
 
 #parentDiv {
   display: flex;
@@ -64,7 +73,7 @@ body {
   padding: 20px;
   width: 500px;
   text-align: center;
-  background-color:#003331;
+  background-color: #003331;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 12px;
@@ -76,7 +85,7 @@ body {
   animation-name: fromleft;
   animation-duration: 800ms;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.89,.07,2,.99);
+  animation-timing-function: cubic-bezier(.89, .07, 2, .99);
 }
 
 .fromRight {
@@ -84,17 +93,28 @@ body {
   animation-name: fromright;
   animation-duration: 800ms;
   animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(.89,.07,2,.99);
+  animation-timing-function: cubic-bezier(.89, .07, 2, .99);
 }
 
 
 @keyframes fromleft {
-  from {left: -150px;}
-  to {left: 0px;}
+  from {
+    left: -150px;
+  }
+
+  to {
+    left: 0px;
+  }
 }
+
 @keyframes fromright {
-  from {right: -150px;}
-  to {right: 0px;}
+  from {
+    right: -150px;
+  }
+
+  to {
+    right: 0px;
+  }
 }
 
 
@@ -122,7 +142,8 @@ body {
   align-items: center;
 }
 
-.h1Form, #title {
+.h1Form,
+#title {
   text-shadow: 4px 3px black;
   text-align: right;
   padding-right: 25px;
@@ -166,20 +187,30 @@ a:hover {
   font-size: large;
 }
 
-@media(max-width: 680px) {
+@media(max-width: 540px) {
   #formDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .h1Form {
     text-shadow: 4px 3px black;
     text-align: center;
     text-transform: capitalize;
   }
 
-  
+  #parentDiv {
+    display: flex;
+    align-items: center;
+    width: auto;
+  }
+
+  .childDiv {
+    width: auto;
+    text-decoration: underline;
+  }
+
 }
 
 
@@ -195,7 +226,10 @@ a:hover {
   -webkit-transition-property: box-shadow, transform;
   transition-property: box-shadow, transform;
 }
-.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+
+.hvr-grow-shadow:hover,
+.hvr-grow-shadow:focus,
+.hvr-grow-shadow:active {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
@@ -213,6 +247,38 @@ a:hover {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
 }
-.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+
+.hvr-glow:hover,
+.hvr-glow:focus,
+.hvr-glow:active {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.list-item {
+  background-color: #003331;
+  opacity: 0.9;
+  border-radius: 10px;
+  position: relative;
+  animation-name: slide;
+  animation-duration: 800ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.265,2);
+}
+
+.listsH1 {
+  background-color: #0f6e6b;
+  display: inline;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.listSpan {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+ul {
+  list-style-type: none;
 }

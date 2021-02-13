@@ -1,19 +1,19 @@
 <%- include partials/header %>
 <%- include partials/navbar %>
 
-<h1><%= headings %> </h1>
+<h1 class="listsH1"><%= headings %> </h1>
 
 <div class="row mb-5">
     <% for (let i = 0; i < students.length; i++) { %>
 
-    <div class="col-xs-1-12 m-2 p-2">
+    <div class="col-xs-1-12 m-2 p-2 list-item">
 
         <ul>
             <li hidden><%= students[i].id %> </li>
-            <li><%= students[i].firstName %> </li>
-            <li><%= students[i].lastName %> </li>
-            <li><%= students[i].birthDate.toString().slice(0,16) %> </li>
-            <li><%= students[i].tuitionFees + '€' %> </li>
+            <li><span class="listSpan"> First name:</span> <%= students[i].firstName %> </li>
+            <li><span class="listSpan"> Last name: </span><%= students[i].lastName %> </li>
+            <li><span class="listSpan"> Birth Date:</span> <%= students[i].birthDate.toString().slice(0,16) %> </li>
+            <li><span class="listSpan"> Tuition:</span> <%= students[i].tuitionFees + '€' %> </li>
         </ul>
     </div>
 

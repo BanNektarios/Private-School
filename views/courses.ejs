@@ -1,20 +1,20 @@
 <%- include partials/header %>
 <%- include partials/navbar %>
 
-<h1><%= headings %> </h1>
+<h1 class="listsH1"><%= headings %>: </h1>
 
-<div class="row mb-5">
+<div class="row mb-5 mt-3">
     <% for (let i = 0; i < courses.length; i++) { %>
 
-    <div class="col-xs-1-12 m-2 p-2">
+    <div class="col-xs-1-12 m-2 p-2 list-item">
 
         <ul>
             <li hidden><%= courses[i].id %> </li>
-            <li><%= courses[i].title %> </li>
-            <li><%= courses[i].stream %> </li>
-            <li><%= courses[i].type %> </li>
-            <li><%= courses[i].start_date.toString().slice(0,16) %> </li>
-            <li><%= courses[i].end_date.toString().slice(0,16) %> </li>
+            <li> <span class="listSpan">Title:</span> <%= courses[i].title %> </li>
+            <li> <span class="listSpan">Stream:</span> <%= courses[i].stream %> </li>
+            <li> <span class="listSpan">Type:</span> <%= courses[i].type %> </li>
+            <li> <span class="listSpan">First day of classes:</span> <%= courses[i].start_date.toString().slice(0,16) %> </li>
+            <li> <span class="listSpan">Last day of classes:</span> <%= courses[i].end_date.toString().slice(0,16) %> </li>
         </ul>
     </div>
     <% } %>

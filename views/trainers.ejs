@@ -1,18 +1,18 @@
 <%- include partials/header %>
 <%- include partials/navbar %>
 
-<h1><%= headings %> </h1>
+<h1 class="listsH1"><%= headings %> </h1>
 
     <div class="row mb-5">
 
         <% for (let i = 0; i < trainers.length; i++) { %>
-        <div class="col-xs-1-12 m-2 p-2">
+        <div class="col-xs-1-12 m-2 p-2 list-item">
 
             <ul>
                 <li hidden><%= trainers[i].id %> </li>
-                <li><%= trainers[i].firstName %> </li>
-                <li><%= trainers[i].lastName %> </li>
-                <li><%= trainers[i].subject %> </li>
+                <li><span class="listSpan">First Name: </span><%= trainers[i].firstName %> </li>
+                <li><span class="listSpan">Last Name:</span><%= trainers[i].lastName %> </li>
+                <li><span class="listSpan">Subject: </span><%= trainers[i].subject %> </li>
             </ul>
         </div>
 
