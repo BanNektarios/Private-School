@@ -8,3 +8,5 @@ START BY:
 3) 'npm run buildDB' <-- this creates the schema, the tables, and populates the tables --><br>
 4) 'npm start' <-- this runs the app --><br>
 5) open a browser and visit page: 'localhost:3000', to see the webpage we created!<br>
+
+*(database schema image is located in images public/images folder)
