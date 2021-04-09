@@ -1,6 +1,6 @@
-# README File for the Personal Project 
+## README File for the Personal Project 
 
-#   To run this app correctly, follow these steps.
+#  To run this app correctly, follow these steps.
 
 START BY:
 1) go to ./lib/DB.js and initDB.js and change the credencials to match your dld<br>
